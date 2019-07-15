@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	Char str[10] ;
+        printf("Enter a string : ");
+	scanf("&s",s);
+	printf("%s",str);
+	
+}

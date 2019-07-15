@@ -1,0 +1,8 @@
+    #include <stdio.h>
+    int main()
+    {
+    char str[20];
+    str = "123";
+    printf("Your string: %s\n", str);
+    return 0;
+}
