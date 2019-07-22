@@ -20,7 +20,7 @@ bool check_delimiter(char x){
 }
 
 bool check_keyword(string words){
-    string keywords[] = {"int","void","main","while","for","char","cout","cin","include","iostream","using","namespace","std"};
+    string keywords[] = {"int","float","void","main","while","for","char","printf","scanf","include","stdio","return"};
     int ksize = sizeof(keywords)/sizeof(keywords[0]) ; //number of operators
     for(int j=0;j<ksize;j++)
         if(words == keywords[j]) return true;
@@ -33,8 +33,9 @@ int main(){
     file.open("test.cpp");
     char x;
     while(file >> noskipws >> x){
-        string words;
+        string words,digits;
         words = "";
+        digits = "";
         key = false;
         if(x == ' ' ) file >> noskipws >> x;
 
@@ -43,6 +44,13 @@ int main(){
         }
         else if(check_delimiter(x)){
             cout<<"\nDelimiter : "<<x;
+        }
+        else if(isdigit(x)){
+            while(isdigit(x)||x=='.'){
+                digits+=x;
+                file >> noskipws >> x;
+            }
+            cout<<"\nOperand : "<<digits;
         }
         else if(isalpha(x)){
             while(isalpha(x) || isdigit(x) || x=='_'){
@@ -56,11 +64,8 @@ int main(){
 
             if(check_operator(x))  cout<<"\nOperator : "<<x;
             if(check_delimiter(x))  cout<<"\nDelimiter : "<<x;
-
          }
-         else if(isdigit(x)) cout<<"\nOperand : "<<x;
     }
     file.close();
     return 0;
 }
-
