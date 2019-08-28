@@ -1,0 +1,70 @@
+
+*{ box-sizing: border-box;}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: inherit;
+}
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  text-decoration: none;
+  display: block;
+  color: darkblue;
+  text-align: center;
+  padding: 14px 16px;
+}
+.navbar li a:hover {
+  background-color: #5552f2;
+  color: navajowhite;
+}
+
+.navbar{
+     background-image: radial-gradient( cyan,white);
+    border-bottom-style: double;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding:0px; 
+}
+
+.main{
+    padding-top:10px;
+    background-image: url(doctor.jpg);
+    background-color:rgb(142, 239, 145);
+    background-position: center;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+}
+.elements{
+    display:inline-block;
+    text-align: center;
+    backface-visibility: visible;
+    background-blend-mode: overlay;
+    background-color: rgba(138, 240, 851,0.4);
+    border-radius:20px;
+    background-size:100%;
+    margin: 50px;
+    height : 250px;
+    width: 500px;
+    padding:10px 50px 10px 50px;
+}
+
+.elements:hover{
+        background-image: radial-gradient(circle,white,cyan);
+        cursor: pointer;
+}
+
+.container{
+    margin-top:10px;
+}
+#ttl{
+    background-color : #2e2963;
+    font-size: 50px;
+    color: red;
+}
